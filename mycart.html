@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Wireless World</title>
+    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 10]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <!-- Meta -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <!-- <meta name="description" content="Mega Able Bootstrap admin template made using Bootstrap 4 and it has huge amount of ready made feature, UI components, pages which completely fulfills any dashboard needs." /> -->
+      <!-- <meta name="keywords" content="bootstrap, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" /> -->
+      <meta name="author" content="codedthemes" />
+      <!-- Favicon icon -->
+      <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <!-- waves.css -->
+    <link rel="stylesheet" href="assets/pages/waves/css/waves.min.css" type="text/css" media="all">
+      <!-- Required Fremwork -->
+      <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap.min.css">
+      <!-- waves.css -->
+      <link rel="stylesheet" href="assets/pages/waves/css/waves.min.css" type="text/css" media="all">
+      <!-- themify icon -->
+      <link rel="stylesheet" type="text/css" href="assets/icon/themify-icons/themify-icons.css">
+      <!-- Font Awesome -->
+      <link rel="stylesheet" type="text/css" href="assets/icon/font-awesome/css/font-awesome.min.css">
+      <!-- scrollbar.css -->
+      <link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
+        <!-- am chart export.css -->
+        <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+      <!-- Style.css -->
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+      
+
+      
+      
+
+
+
+
+      <style>
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 30px;
+}
+.product-card{
+    border: 1px solid rgb(166, 174, 245);
+}
+
+
+
+
+
+
+
+#table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 50px;
+}
+
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  font-weight: 600;
+}
+
+
+      </style>
+
+
+
+
+  </head> 
+
+  <body onload="test()">
+  <!-- Pre-loader start -->
+  <div class="theme-loader">
+      <div class="loader-track">
+          <div class="preloader-wrapper">
+              <div class="spinner-layer spinner-blue">
+                  <div class="circle-clipper left">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                      <div class="circle"></div>
+                  </div>
+              </div>
+              <div class="spinner-layer spinner-red">
+                  <div class="circle-clipper left">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                      <div class="circle"></div>
+                  </div>
+              </div>
+            
+              <div class="spinner-layer spinner-yellow">
+                  <div class="circle-clipper left">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                      <div class="circle"></div>
+                  </div>
+              </div>
+            
+              <div class="spinner-layer spinner-green">
+                  <div class="circle-clipper left">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                      <div class="circle"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Pre-loader end -->
+  <div id="pcoded" class="pcoded">
+      <div class="pcoded-overlay-box"></div>
+      <div class="pcoded-container navbar-wrapper">
+          <nav class="navbar header-navbar pcoded-header">
+              <div class="navbar-wrapper">
+                  <div class="navbar-logo">
+                      <a class="mobile-menu waves-effect waves-light" id="mobile-collapse" href="#!">
+                          <i class="ti-menu"></i>
+                      </a>
+                      <div class="mobile-search waves-effect waves-light">
+                          <div class="header-search">
+                              <div class="main-search morphsearch-search">
+                                  <div class="input-group">
+                                      <span class="input-group-addon search-close"><i class="ti-close"></i></span>
+                                      <input type="text" class="form-control" placeholder="Enter Keyword">
+                                      <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div>
+                      <p style="color: aliceblue; text-align: center; margin-bottom: 1.5px;  padding: 25px; font-weight: 1500;"> <b>Wireless World</b></p>
+                      </div>
+                      <a class="mobile-options waves-effect waves-light">
+                          <i class="ti-more"></i>
+                      </a>
+                  </div>
+                
+                  <div class="navbar-container container-fluid">
+                      <ul class="nav-left">
+                          <li>
+                              <div class="sidebar_toggle"><a href="javascript:void(0)"><i class="ti-menu"></i></a></div>
+                          </li>
+                          <li class="header-search">
+                              <div class="main-search morphsearch-search">
+                                  <div class="input-group">
+                                      <span class="input-group-addon search-close"><i class="ti-close"></i></span>
+                                      <input type="text" class="form-control">
+                                      <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+                                  </div>
+                              </div>
+                          </li>
+                          <li>
+                              <a href="#!" onclick="javascript:toggleFullScreen()" class="waves-effect waves-light">
+                                  <i class="ti-fullscreen"></i>
+                              </a>
+                          </li>
+                      </ul>
+                      <ul class="nav-right">
+                          <li class="user-profile header-notification">
+                              <a href="#!" class="waves-effect waves-light">
+                                  <img src="assets/images/youravatar.png" class="img-radius" alt="User-Profile-Image">
+                                  <span>Vijay Anand</span>
+                                  <i class="ti-angle-down"></i>
+                              </a>
+                              <ul class="show-notification profile-notification">
+                                  <li class="waves-effect waves-light">
+                                      <a href="settings.html">
+                                          <i class="ti-settings"></i> Settings
+                                      </a>
+                                  </li>
+                                  <li class="waves-effect waves-light">
+                                      <a href="Profile.html">
+                                          <i class="ti-user"></i> Profile
+                                      </a>
+                                  </li>
+                                  <li class="waves-effect waves-light">
+                                      <a href="delivery.html">
+                                          <i class="ti-email"></i> My Orders
+                                      </a>
+                                  </li>
+                                  <li class="waves-effect waves-light">
+                                      <a href="mycart.html">
+                                          <i class="ti-lock"></i> My Cart
+                                      </a>
+                                  </li>
+                                  <li class="waves-effect waves-light">
+                                      <a href="Sign In.html">
+                                          <i class="ti-layout-sidebar-left"></i> Logout
+                                      </a>
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+
+          <div class="pcoded-main-container">
+              <div class="pcoded-wrapper">
+                  <nav class="pcoded-navbar">
+                      <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
+                      <div class="pcoded-inner-navbar main-menu">
+                          <div class="">
+                              <div class="main-menu-header">
+                                  <img class="img-80 img-radius" src="assets/images/youravatar.png" alt="User-Profile-Image">
+                                  <div class="user-details">
+                                      <span id="more-details">Vijay Anand<i class="fa fa-caret-down"></i></span>
+                                  </div>
+                              </div>
+        
+                              <div class="main-menu-content">
+                                  <ul>
+                                      <li class="more-details">
+                                          <a href="Profile.html"><i class="ti-user"></i>View Profile</a>
+                                          <a href="settings.html"><i class="ti-settings"></i>Settings</a>
+                                          <a href="Sign In.html"><i class="ti-layout-sidebar-left"></i>Logout</a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <div class="p-15 p-b-0">
+                              <form class="form-material">
+                                  <div class="form-group form-primary">
+                                      <input type="text" name="footer-email" class="form-control" maxlength="15" required="">
+                                      <span class="form-bar"></span>
+                                      <label class="float-label"><i class="fa fa-search m-r-10"></i>Search Mobile</label>
+                                  </div>
+                              </form>
+                          </div>
+                          <ul class="pcoded-item pcoded-left-item">
+                             <li>
+                                 <a href="Sample.html" class="waves-effect waves-dark">
+                                     <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                     <span class="pcoded-mtext" data-i18n="nav.dash.main">Dashboard</span>
+                                     <span class="pcoded-mcaret"></span>
+                                 </a>
+                             </li>
+                              </ul>
+                               <ul class="pcoded-item pcoded-left-item">
+                             <li>
+                                 <a href="category.html"> <i class="waves-effect waves-dark"></i>
+                                     <span class="pcoded-micon"><i class="fa fa-list-alt" aria-hidden="true"></i>
+                                        <b>FC</b></span>
+                                     <span class="pcoded-mtext" data-i18n="nav.form-components.main">Categories</span>
+                                     <span class="pcoded-mcaret"></span>
+                                 </a>
+                             </li>
+                             <li>
+                                   <a href="topbrands.html"> <i class="waves-effect waves-dark"></i>
+                                     <span class="pcoded-micon"><i class="fa fa-buysellads" aria-hidden="true"></i>
+                                     </i><b>FC</b></span>
+                                     <span class="pcoded-mtext" data-i18n="nav.form-components.main">Top Brands</span>
+                                     <span class="pcoded-mcaret"></span>
+                                 </a>
+                             </li>
+                             <li class="active">
+                                 <a href="mycart.html"> <i class="waves-effect waves-dark"></i>
+                                     <span class="pcoded-micon"><i class="fa fa-diamond"></i><b>FC</b></span>
+                                     <span class="pcoded-mtext" data-i18n="nav.form-components.main">My Cart</span>
+                                     <span class="pcoded-mcaret"></span>
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="delivery.html" class="waves-effect waves-dark">
+                                     <span class="pcoded-micon"><i class="fa fa-truck" aria-hidden="true"></i><b>FC</b></span>
+                                     <span class="pcoded-mtext" data-i18n="nav.form-components.main">Delivery</span>
+                                     <span class="pcoded-mcaret"></span>
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="contact.html" class="waves-effect waves-dark">
+                                     <span class="pcoded-micon"><i class="fa fa-phone"></i><b>FC</b></span>
+                                     <span class="pcoded-mtext" data-i18n="nav.form-components.main">Contact</span>
+                                     <span class="pcoded-mcaret"></span>
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="about.html" class="waves-effect waves-dark">
+                                     <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                     <span class="pcoded-mtext" data-i18n="nav.form-components.main">About</span>
+                                     <span class="pcoded-mcaret"></span>
+                                 </a>
+                             </li>
+                             
+                     </div>
+                 </nav>                    
+                  </nav>
+                  <div class="pcoded-content">
+                       <!-- Page-header start -->
+                       <div class="page-header">
+                        <div class="page-block">
+                            <div class="row align-items-center">
+                                <div class="col-md-8">
+                                    <div class="page-header-title">
+                                        <h5 class="m-b-10">My Cart</h5>
+                                        <p class="m-b-0">Welcome to Wireless World</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <ul class="breadcrumb-title">
+                                        <li class="breadcrumb-item">
+                                            <a href="Sample.html"> <i class="fa fa-home"></i> </a>
+                                        </li>
+                                        <li class="breadcrumb-item"><a href="Sample.html">Dashboard</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="pcoded-inner-content">
+                            <!-- Main-body start -->
+                            <div class="main-body">
+                                <div class="page-wrapper">
+                                    <!-- Page-body start -->
+                                    <div class="page-body">
+                                        
+                                          
+                                        
+
+
+
+
+<h2>My Cart</h2><br>  
+
+
+
+
+
+<div class="row; grid-container" style="border:1.5px solid rgb(0, 0, 0); padding:10px;">
+    <div >
+        <img src="https://img.poorvika.com/cdn-cgi/image/width=300,height=300,quality=75/1600_JPG/Mobiles/Apple/Apple-iPhone-14-Pro-Max/GOLD/Apple-iPhone-14-Pro-Max-gold-5.jpg" style="height: 180px;width: 200px;float: left; ">
+        <span style="font-weight: 600; font-size: large; margin-left: 15px;">i Phone 14 Pro</span><br><br>
+        <span style="margin-left: 10px;">Color - Rose Gold</span><br>
+        <span style="margin-left: 10px;">Seller - Supreme Mobiles </span><br>
+        <span style="margin-left: 10px;">Storage - 128 GB </span><br><br><br>
+        <span style="font-weight: 600; font-size:large; margin-left: 10px;">₹ 1,19,999</span><br>
+    </div>
+    
+    <div >
+        <br>
+          <p><strong>Yet to be Ordered</strong></p><br>
+      </div>
+    <div>
+        <!-- <button class="btn"><i class="fa fa-close"></i>Cancel order</button> --> <br>
+        <h6> <a href="orderpage.html"><button type="button" class="btn btn-primary btn-mdorg btn-block waves-effect waves-light text-center m-b-20 btn-mdcart">Buy Now</button> </h6></a>
+    <button type="button" class="btn-mdcart" onclick="msg1()">Remove from Cart</button> 
+    </div>
+    <button class="btn"><i class="fa fa-map-marker"></i> Track</button> 
+    
+</div> <br>
+
+
+
+
+
+
+
+
+
+
+    <div class="row; grid-container" style="border:1.5px solid rgb(0, 0, 0); padding:10px;">
+        <div >
+            <img src="https://img.poorvika.com/cdn-cgi/image/width=300,height=300,quality=75/1600_JPG/Mobiles/Oneplus/Oneplus-10R-5G/Oneplus-10R-5G-Forest-Green-Front-Back.jpg" style="height: 180px;width: 200px;float: left; ">
+            
+            <span style="font-weight: 600; font-size: large; margin-left: 15px;">One Plus 10R 5G</span><br><br>
+            <span style="margin-left: 10px;">Color - Forest Green</span><br>
+            <span style="margin-left: 10px;">Seller - Silver Mobiles </span><br>
+            <span style="margin-left: 10px;">Storage - 256 GB </span><br><br><br>
+            <span style="font-weight: 600; font-size:large; margin-left: 10px;">₹ 36,999</span><br>
+        
+        </div>
+        
+        <div >
+            <br>
+              <p><strong>Yet to be Ordered</strong></p><br>
+          </div>
+        
+        <div>
+            <!-- <button class="btn"><i class="fa fa-close"></i>Cancel order</button> --> <br>
+            <h6> <a href="orderpage.html"><button type="button" class="btn btn-primary btn-mdorg btn-block waves-effect waves-light text-center m-b-20 btn-mdcart">Buy Now</button> </h6></a>
+        <button type="button" class="btn-mdcart" onclick="msg2()">Remove from Cart</button> 
+        </div>
+        <button class="btn"><i class="fa fa-map-marker"></i> Track</button> 
+        
+        </div> <br>
+
+
+
+
+
+
+
+
+
+
+                                        <!-- 1st Order -->
+ 
+
+ <div class="row; grid-container" style="border:1.5px solid rgb(0, 0, 0); padding:10px;">
+<div >
+    <img src="https://images.samsung.com/is/image/samsung/p6pim/in/2202/gallery/in-galaxy-s22-ultra-s908-413016-sm-s908ezwginu-530969260?$650_519_PNG$" style="height: 180px;width: 200px;float: left; ">
+    
+    <span style="font-weight: 600; font-size: large; margin-left: 15px;">Samsung S22 Ultra</span><br><br>
+    <span style="margin-left: 10px;">Color - White</span><br>
+    <span style="margin-left: 10px;">Seller - itel Mobiles </span><br>
+    <span style="margin-left: 10px;">Storage - 512 GB </span><br><br><br>
+    <span style="font-weight: 600; font-size:large; margin-left: 10px;">₹ 1,09,999</span><br>
+
+</div>
+
+<div >
+    <br>
+      <p><strong>Yet to be Ordered</strong></p><br>
+  </div>
+
+<div>
+    <!-- <button class="btn"><i class="fa fa-close"></i>Cancel order</button> --> <br>
+    <h6> <a href="orderpage.html"><button type="button" class="btn btn-primary btn-mdorg btn-block waves-effect waves-light text-center m-b-20 btn-mdcart">Buy Now</button> </h6></a>
+<button type="button" class="btn-mdcart" onclick="msg()">Remove from Cart</button> 
+</div>
+<button class="btn"><i class="fa fa-map-marker"></i> Track</button> 
+
+</div> <br>
+                                                               
+
+
+
+                                        <!-- 2nd Order -->
+                                        
+            
+                                        <div class="row; grid-container" style="border:1.5px solid rgb(0, 0, 0); padding:10px;">
+                                       <div >
+                                           <img src="data:image/jpeg;base64,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" style="height: 180px;width: 200px;float: left; ">
+                                           
+                                           <span style="font-weight: 600; font-size: large; margin-left: 15px;">Nothing Phone 6</span><br><br>
+                                           <span style="margin-left: 10px;">Color - White</span><br>
+                                           <span style="margin-left: 10px;">Seller - Silver Mobiles </span><br>
+                                           <span style="margin-left: 10px;">Storage - 256 GB </span><br><br><br>
+                                           <span style="font-weight: 600; font-size:large; margin-left: 10px;">₹ 39,999</span><br>
+                                       
+                                       </div>
+                                       
+                                       <div >
+                                         <br>
+                                           <p><strong>Yet to be Ordered</strong></p><br>
+                                       </div>
+                                       
+                                       <div>
+                                           <!-- <button class="btn"><i class="fa fa-close"></i>Cancel order</button> --> <br>
+                                           <h6> <a href="orderpage.html"><button type="button" class="btn btn-primary btn-mdorg btn-block waves-effect waves-light text-center m-b-20 btn-mdcart">Buy Now</button> </h6></a>
+                                           <button type="button" class="btn-mdcart" onclick="msg()">Remove from Cart</button> 
+                                       </div>
+                                       <button class="btn"><i class="fa fa-map-marker"></i> Track</button>
+                                       </div> <br>
+
+
+
+                            <!-- 3rd order -->
+
+
+                                       <div class="row; grid-container" style="border:1.5px solid rgb(0, 0, 0); padding:10px;">
+                                        <div >
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnHqgv0g91c0qTAML4xRDGeRPIGGis72oOy9HwavfiJBrmLyqlIsjp-6X9nIb4oibxsGw&usqp=CAU" style="height: 180px;width: 200px;float: left; ">
+                                            
+                                            <span style="font-weight: 600; font-size: large; margin-left: 15px;">i Phone 14 Pro</span><br><br>
+                                            <span style="margin-left: 10px;">Color - Black</span><br>
+                                            <span style="margin-left: 10px;">Seller - Silver Mobiles </span><br>
+                                            <span style="margin-left: 10px;">Storage - 256 GB </span><br><br><br>
+                                            <span style="font-weight: 600; font-size:large; margin-left: 10px;">₹ 1,39,999</span><br>
+                                        
+                                        </div>
+                                        
+                                        <div >
+                                          <br>
+                                            <p><strong>Yet to be Ordered</strong></p><br>
+                                        </div>
+                                        
+                                        <div>
+                                            <!-- <button class="btn"><i class="fa fa-close"></i>Cancel order</button> --> <br>
+                                            <h6> <a href="orderpage.html"><button type="button" class="btn btn-primary btn-mdorg btn-block waves-effect waves-light text-center m-b-20 btn-mdcart">Buy Now</button> </h6></a>
+                                            <button type="button" class="btn-mdcart" onclick="msg()">Remove from Cart</button> 
+                                        </div>
+                                        <button class="btn"><i class="fa fa-map-marker"></i> Track</button>
+                                        </div> <br>
+
+                                    
+
+
+
+
+                                        <!-- 4th order -->
+
+
+                                       <div class="row; grid-container" style="border:1.5px solid rgb(0, 0, 0); padding:10px;">
+                                        <div >
+                                            <img src="https://www.gizmochina.com/wp-content/uploads/2022/09/Apple-iPhone-14-Pro.png" style="height: 180px;width: 200px;float: left; ">
+                                            
+                                            <span style="font-weight: 600; font-size: large; margin-left: 15px;">i Phone 13&nbsp;&nbsp;</span><br><br>
+                                            <span style="margin-left: 10px;">Color - White</span><br>
+                                            <span style="margin-left: 10px;">Seller - Silver Mobiles </span><br>
+                                            <span style="margin-left: 10px;">Storage - 256 GB </span><br><br><br>
+                                            <span style="font-weight: 600; font-size:large; margin-left: 10px;">₹ 59,999</span><br>
+                                        
+                                        </div>
+                                        
+                                        <div style="margin-left: 30px;">
+                                          <br>
+                                            <p><strong>Yet to be Ordered</strong></p><br>
+                                        </div>
+                                        
+                                        <div>
+                                            <!-- <button class="btn"><i class="fa fa-close"></i>Cancel order</button> --> <br>
+                                            <h6> <a href="orderpage.html"><button type="button" class="btn btn-primary btn-mdorg btn-block waves-effect waves-light text-center m-b-20 btn-mdcart">Buy Now</button> </h6></a>
+                                            <button type="button" class="btn-mdcart" onclick="msg()">Remove from Cart</button> 
+                                        </div>
+                                        <button class="btn"><i class="fa fa-map-marker"></i> Track</button>
+                                        </div> <br>
+
+
+                                        <table id="table">
+                                            <tr>
+                                            <th>Name</th>
+                                            <th>Price</th>
+                                            <th>color</th>
+                                            <th>Processor</th>
+                                            <th>Storage</th>
+                                            <!-- <th>Action</th>  -->
+                                        </tr>      
+                                    
+                                        </table>
+                                        <!-- <input type="button" id="submitBtn" value="Show the cart" onclick="test1()"/> -->
+
+
+
+                                   
+                                <div id="styleSelector"> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+
+
+function msg() {
+          alert("Your item has been removed from cart");
+        }
+
+        function msg1() {
+          alert("Your item has been removed from cart");
+          localStorage.removeItem("Name1",null);
+          localStorage.removeItem("Price1",null);
+          localStorage.removeItem("color1",null);
+          localStorage.removeItem("Processor1",null);
+          localStorage.removeItem("Storage1",null);
+        }
+
+
+
+        function msg2() {
+          alert("Your item has been removed from cart");
+
+          localStorage.removeItem("Name",null);
+          localStorage.removeItem("Price",null);
+          localStorage.removeItem("color",null);
+          localStorage.removeItem("Processor",null);
+          localStorage.removeItem("Storage",null);
+
+        }
+
+
+
+
+        function test(){
+        //add values on table
+
+
+                   var Name1 = localStorage.getItem("Name1");
+                   var Price1 = localStorage.getItem("Price1");
+                   var color1 = localStorage.getItem("color1");
+                   var Processor1 = localStorage.getItem("Processor1");
+                   var Storage1 = localStorage.getItem("Storage1");
+
+                    var rowCount =table.rows.length;
+					         if (rowCount > 2) return;
+                    var row= table.insertRow(-1);
+
+                    row.insertCell(0).innerHTML = Name1;
+                    row.insertCell(1).innerHTML= Price1;
+                    row.insertCell(2).innerHTML= color1;
+                    row.insertCell(3).innerHTML= Processor1;
+                    row.insertCell(4).innerHTML= Storage1;
+
+
+
+
+
+
+                    
+                   var Name = localStorage.getItem("Name");
+                   var Price = localStorage.getItem("Price");
+                   var color = localStorage.getItem("color");
+                   var Processor = localStorage.getItem("Processor");
+                   var Storage = localStorage.getItem("Storage");
+
+                    var rowCount =table.rows.length;
+					         if (rowCount > 2) return;
+                    var row= table.insertRow(-1);
+
+                    row.insertCell(0).innerHTML = Name;
+                    row.insertCell(1).innerHTML= Price;
+                    row.insertCell(2).innerHTML= color;
+                    row.insertCell(3).innerHTML= Processor;
+                    row.insertCell(4).innerHTML= Storage;
+
+
+
+
+                    // row.insertCell(3).innerHTML='<input type="button" value="Delete" onclick="deleteRow(this)">';
+
+                }
+        
+
+
+    </script>
+
+
+
+    <!-- Required Jquery -->
+    <script type="text/javascript" src="assets/js/jquery/jquery.min.js"></script>
+    <script src="assets/js/pcoded.min.js"></script>
+    <script src="assets/js/vertical-layout.min.js "></script>
+    <!-- custom js -->
+    <script type="text/javascript" src="assets/js/script.js "></script>
+</body>
+
+</html>

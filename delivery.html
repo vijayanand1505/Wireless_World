@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Wireless World</title>
+    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 10]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <!-- Meta -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <!-- <meta name="description" content="Mega Able Bootstrap admin template made using Bootstrap 4 and it has huge amount of ready made feature, UI components, pages which completely fulfills any dashboard needs." /> -->
+      <!-- <meta name="keywords" content="bootstrap, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" /> -->
+      <meta name="author" content="codedthemes" />
+      <!-- Favicon icon -->
+      <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <!-- waves.css -->
+    <link rel="stylesheet" href="assets/pages/waves/css/waves.min.css" type="text/css" media="all">
+      <!-- Required Fremwork -->
+      <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap.min.css">
+      <!-- waves.css -->
+      <link rel="stylesheet" href="assets/pages/waves/css/waves.min.css" type="text/css" media="all">
+      <!-- themify icon -->
+      <link rel="stylesheet" type="text/css" href="assets/icon/themify-icons/themify-icons.css">
+      <!-- Font Awesome -->
+      <link rel="stylesheet" type="text/css" href="assets/icon/font-awesome/css/font-awesome.min.css">
+      <!-- scrollbar.css -->
+      <link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
+        <!-- am chart export.css -->
+        <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+      <!-- Style.css -->
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+      
+
+      
+      
+
+
+
+
+      <style>
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 30px;
+}
+.product-card{
+    border: 1px solid rgb(166, 174, 245);
+}
+
+
+
+
+.mapouter{
+        position:relative;
+        text-align:right;
+        width:100%;
+        height:234px;
+        }
+
+.gmap_canvas {
+            overflow:hidden;
+            background:none!important;
+            width:100%;
+            height:234px;
+            }
+            
+.gmap_iframe {
+                height:234px!important;
+            }
+
+
+
+
+/* Truck image and two boxes image CSS */
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: url(https://learndesigntutorial.com/wp-content/uploads/2021/03/bg.png) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-color: rgba(0,0,0,0.7);
+  background-blend-mode: overlay;
+  height: 100vh;
+  overflow: hidden;
+}
+.wrap{
+  position:sticky;
+  height: 0px;
+  bottom: 100px;
+  left: 0;
+  width: 100%;
+}
+.image{
+  width: 150px;
+  position: absolute;
+}
+.truck-img{
+  bottom: 0;
+  left: -150px;
+  z-index: 2;
+  animation: truck 10s linear infinite;
+}
+@keyframes truck{
+  40%, 70%{
+    left: 60%;
+  }
+  100%{
+    left: 100%;
+  }
+}
+.box-img{
+  width: 35px;
+  z-index: 1;
+  bottom: 25px;
+  left: 60%;
+  opacity: 0;
+  animation: box 10s linear infinite;
+}
+.box-img2{
+  animation-delay: 1s;
+}
+@keyframes box{
+  0%, 40%{
+    opacity: 0;
+    left: 55%;
+  }
+  50%{
+    opacity: 1;
+    left: 60%;
+  }
+  60%, 100%{
+    opacity: 0;
+    left: 60%;
+  }
+}
+     
+     
+     
+     
+     </style> 
+
+
+
+
+  </head> 
+
+  <body>
+  <!-- Pre-loader start -->
+  <div class="theme-loader">
+      <div class="loader-track">
+          <div class="preloader-wrapper">
+              <div class="spinner-layer spinner-blue">
+                  <div class="circle-clipper left">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                      <div class="circle"></div>
+                  </div>
+              </div>
+              <div class="spinner-layer spinner-red">
+                  <div class="circle-clipper left">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                      <div class="circle"></div>
+                  </div>
+              </div>
+            
+              <div class="spinner-layer spinner-yellow">
+                  <div class="circle-clipper left">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                      <div class="circle"></div>
+                  </div>
+              </div>
+            
+              <div class="spinner-layer spinner-green">
+                  <div class="circle-clipper left">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                      <div class="circle"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Pre-loader end -->
+  <div id="pcoded" class="pcoded">
+      <div class="pcoded-overlay-box"></div>
+      <div class="pcoded-container navbar-wrapper">
+          <nav class="navbar header-navbar pcoded-header">
+              <div class="navbar-wrapper">
+                  <div class="navbar-logo">
+                      <a class="mobile-menu waves-effect waves-light" id="mobile-collapse" href="#!">
+                          <i class="ti-menu"></i>
+                      </a>
+                      <div class="mobile-search waves-effect waves-light">
+                          <div class="header-search">
+                              <div class="main-search morphsearch-search">
+                                  <div class="input-group">
+                                      <span class="input-group-addon search-close"><i class="ti-close"></i></span>
+                                      <input type="text" class="form-control" placeholder="Enter Keyword">
+                                      <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div>
+                      <p style="color: aliceblue; text-align: center; margin-bottom: 1.5px;  padding: 25px; font-weight: 1500;"> <b>Wireless World</b></p>
+                      </div>
+                      <a class="mobile-options waves-effect waves-light">
+                          <i class="ti-more"></i>
+                      </a>
+                  </div>
+                
+                  <div class="navbar-container container-fluid">
+                      <ul class="nav-left">
+                          <li>
+                              <div class="sidebar_toggle"><a href="javascript:void(0)"><i class="ti-menu"></i></a></div>
+                          </li>
+                          <li class="header-search">
+                              <div class="main-search morphsearch-search">
+                                  <div class="input-group">
+                                      <span class="input-group-addon search-close"><i class="ti-close"></i></span>
+                                      <input type="text" class="form-control">
+                                      <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+                                  </div>
+                              </div>
+                          </li>
+                          <li>
+                              <a href="#!" onclick="javascript:toggleFullScreen()" class="waves-effect waves-light">
+                                  <i class="ti-fullscreen"></i>
+                              </a>
+                          </li>
+                      </ul>
+                      <ul class="nav-right">
+                          <li class="user-profile header-notification">
+                              <a href="#!" class="waves-effect waves-light">
+                                  <img src="assets/images/youravatar.png" class="img-radius" alt="User-Profile-Image">
+                                  <span>Vijay Anand</span>
+                                  <i class="ti-angle-down"></i>
+                              </a>
+                              <ul class="show-notification profile-notification">
+                                  <li class="waves-effect waves-light">
+                                      <a href="settings.html">
+                                          <i class="ti-settings"></i> Settings
+                                      </a>
+                                  </li>
+                                  <li class="waves-effect waves-light">
+                                      <a href="Profile.html">
+                                          <i class="ti-user"></i> Profile
+                                      </a>
+                                  </li>
+                                  <li class="waves-effect waves-light">
+                                      <a href="delivery.html">
+                                          <i class="ti-email"></i> My Orders
+                                      </a>
+                                  </li>
+                                  <li class="waves-effect waves-light">
+                                      <a href="mycart.html">
+                                          <i class="ti-lock"></i> My Cart
+                                      </a>
+                                  </li>
+                                  <li class="waves-effect waves-light">
+                                      <a href="Sign In.html">
+                                          <i class="ti-layout-sidebar-left"></i> Logout
+                                      </a>
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+
+          <div class="pcoded-main-container">
+              <div class="pcoded-wrapper">
+                  <nav class="pcoded-navbar">
+                      <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
+                      <div class="pcoded-inner-navbar main-menu">
+                          <div class="">
+                              <div class="main-menu-header">
+                                  <img class="img-80 img-radius" src="assets/images/youravatar.png" alt="User-Profile-Image">
+                                  <div class="user-details">
+                                      <span id="more-details">Vijay Anand<i class="fa fa-caret-down"></i></span>
+                                  </div>
+                              </div>
+        
+                              <div class="main-menu-content">
+                                  <ul>
+                                      <li class="more-details">
+                                          <a href="Profile.html"><i class="ti-user"></i>View Profile</a>
+                                          <a href="settings.html"><i class="ti-settings"></i>Settings</a>
+                                          <a href="Sign In.html"><i class="ti-layout-sidebar-left"></i>Logout</a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <div class="p-15 p-b-0">
+                              <form class="form-material">
+                                  <div class="form-group form-primary">
+                                      <input type="text" name="footer-email" class="form-control" maxlength="15" required="">
+                                      <span class="form-bar"></span>
+                                      <label class="float-label"><i class="fa fa-search m-r-10"></i>Search Mobile</label>
+                                  </div>
+                              </form>
+                          </div>
+                          <ul class="pcoded-item pcoded-left-item">
+                             <li>
+                                 <a href="Sample.html" class="waves-effect waves-dark">
+                                     <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                     <span class="pcoded-mtext" data-i18n="nav.dash.main">Dashboard</span>
+                                     <span class="pcoded-mcaret"></span>
+                                 </a>
+                             </li>
+                              </ul>
+                               <ul class="pcoded-item pcoded-left-item">
+                             <li>
+                                 <a href="category.html"> <i class="waves-effect waves-dark"></i>
+                                     <span class="pcoded-micon"><i class="fa fa-list-alt" aria-hidden="true"></i>
+                                        <b>FC</b></span>
+                                     <span class="pcoded-mtext" data-i18n="nav.form-components.main">Categories</span>
+                                     <span class="pcoded-mcaret"></span>
+                                 </a>
+                             </li>
+                             <li>
+                                   <a href="topbrands.html"> <i class="waves-effect waves-dark"></i>
+                                     <span class="pcoded-micon"><i class="fa fa-buysellads" aria-hidden="true"></i>
+                                     </i><b>FC</b></span>
+                                     <span class="pcoded-mtext" data-i18n="nav.form-components.main">Top Brands</span>
+                                     <span class="pcoded-mcaret"></span>
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="mycart.html"> <i class="waves-effect waves-dark"></i>
+                                     <span class="pcoded-micon"><i class="fa fa-diamond"></i><b>FC</b></span>
+                                     <span class="pcoded-mtext" data-i18n="nav.form-components.main">My Cart</span>
+                                     <span class="pcoded-mcaret"></span>
+                                 </a>
+                             </li>
+                             <li class="active">
+                                 <a href="delivery.html" class="waves-effect waves-dark">
+                                     <span class="pcoded-micon"><i class="fa fa-truck" aria-hidden="true"></i><b>FC</b></span>
+                                     <span class="pcoded-mtext" data-i18n="nav.form-components.main">Delivery</span>
+                                     <span class="pcoded-mcaret"></span>
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="contact.html" class="waves-effect waves-dark">
+                                     <span class="pcoded-micon"><i class="fa fa-phone"></i><b>FC</b></span>
+                                     <span class="pcoded-mtext" data-i18n="nav.form-components.main">Contact</span>
+                                     <span class="pcoded-mcaret"></span>
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="about.html" class="waves-effect waves-dark">
+                                     <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                     <span class="pcoded-mtext" data-i18n="nav.form-components.main">About</span>
+                                     <span class="pcoded-mcaret"></span>
+                                 </a>
+                             </li>
+                             
+                     </div>
+                 </nav>                    
+                  </nav>
+                  <div class="pcoded-content">
+                       <!-- Page-header start -->
+                       <div class="page-header">
+                        <div class="page-block">
+                            <div class="row align-items-center">
+                                <div class="col-md-8">
+                                    <div class="page-header-title">
+                                        <h5 class="m-b-10">Delivery</h5>
+                                        <p class="m-b-0">Welcome to Wireless World</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <ul class="breadcrumb-title">
+                                        <li class="breadcrumb-item">
+                                            <a href="Sample.html"> <i class="fa fa-home"></i> </a>
+                                        </li>
+                                        <li class="breadcrumb-item"><a href="Sample.html">Dashboard</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Truck and two boxes image Code -->
+
+                        <div class="wrap">
+                            <img class="image truck-img" src="https://learndesigntutorial.com/wp-content/uploads/2021/03/truck.png" alt="">
+                            <img class="image box-img" src="https://learndesigntutorial.com/wp-content/uploads/2021/03/box.png" alt="">
+                            <img class="image box-img box-img2" src="https://learndesigntutorial.com/wp-content/uploads/2021/03/box.png" alt="">
+                        </div> 
+
+                    </div>
+                        <div class="pcoded-inner-content">
+                            <!-- Main-body start -->
+                            <div class="main-body">
+                                <div class="page-wrapper">
+                                    <!-- Page-body start -->
+                                    <div class="page-body">
+                                        
+
+<h2>My Orders</h2><br>  
+
+
+                                        <!-- 1st Order -->
+ <h4 style="background-color:#448aff; width: 185px; color: azure;">OD198263847586</h4> 
+
+ <div class="row; grid-container" style="border:1.5px solid rgb(0, 0, 0); padding:10px;">
+<div >
+    <img src="https://img.poorvika.com/cdn-cgi/image/width=300,height=300,quality=75/1600_JPG/Mobiles/Apple/Apple-iPhone-14/Red/iPhone-14-4GB-128GB-Red-FB.jpg" style="height: 180px;width: 200px;float: left; ">
+    
+    <span style="font-weight: 600; font-size: large; margin-left: 15px;">Apple i phone 13</span><br><br>
+    <span style="margin-left: 10px;">Color - Red</span><br>
+    <span style="margin-left: 10px;">Seller - itel Mobiles </span><br>
+    <span style="margin-left: 10px;">Storage - 256 GB </span><br><br><br>
+    <span style="font-weight: 600; font-size:large; margin-left: 10px;">₹ 64,999</span><br>
+
+</div>
+
+<div >
+    <p>Ordered on wednesday, Feb 15, 2023</p><br>
+    <p>Your Order has been Processing</p><br>
+    <p>Delivery Expected by Sun, Feb 19, 2023</p><br>
+</div>
+
+<div>
+    <button type="button" class="btn-mdcart" onclick="msg1()"><i class="fa fa-close" ></i>Cancel order</button> <br> <br> <br>
+    <a href="topbrands.html">
+    <button class="btn-mdcart"><i class='fa fa-retweet'></i>View Similar</button></a>
+</div>
+ <!-- <button class="btn" id="googleMap"><i class="fa fa-map-marker"></i> Track </button>  -->
+ <div class="mapouter">
+    <div class="gmap_canvas">
+        <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=207&amp;height=234&amp;hl=en&amp;q=Rndsoftech Private limited&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+        <!-- <a href="https://www.google.com/maps/place/University+of+Oxford/@11.2372639,77.0763035,18.23z/data=!4m6!3m5!1s0x4876c6a9ef8c485b:0xd2ff1883a001afed!8m2!3d51.7548164!4d-1.2543668!16zL20vMDd0Z24?hl=en"></a> -->
+    </div>
+</div>
+</div> <br>
+
+
+<style>
+    
+</style>
+
+
+
+                                        <!-- 2nd Order -->
+                                        <h4 style="background-color:#448aff; width: 185px; color: azure;">OD139485267498</h4> 
+            
+                                        <div class="row; grid-container" style="border:1.5px solid rgb(0, 0, 0); padding:10px;">
+                                       <div >
+                                           <img src="https://img.poorvika.com/cdn-cgi/image/width=300,height=300,quality=75/1600_JPG/Mobiles/Oneplus/Oneplus-10R-5G/Oneplus-10R-5G-Forest-Green-Front-Back.jpg" style="height: 180px;width: 200px;float: left; ">
+                                           
+                                           <span style="font-weight: 600; font-size: large; margin-left: 15px;">Oneplus 10R 5G</span><br><br>
+                                           <span style="margin-left: 10px;">Color - Forest Green</span><br>
+                                           <span style="margin-left: 10px;">Seller - Silver Mobiles </span><br>
+                                           <span style="margin-left: 10px;">Storage - 256 GB </span><br><br><br>
+                                           <span style="font-weight: 600; font-size:large; margin-left: 10px;">₹ 49,999</span><br>
+                                       
+                                       </div>
+                                       
+                                       <div >
+                                           <p>Ordered on Monday, Feb 20, 2023</p><br>
+                                           <p>Your Order has been Processing</p><br>
+                                           <p>Delivery Expected by Sun, Feb 26, 2023</p><br>
+                                       </div>
+                                       
+                                       <div>
+                                           <button type="button" class="btn-mdcart" onclick="msg2()"><i class="fa fa-close" ></i>Cancel order</button> <br> <br> <br>
+                                           <a href="topbrands.html">
+                                           <button class="btn-mdcart"><i class='fa fa-retweet'></i>View Similar</button></a>
+                                       </div>
+                                       <!-- <button class="btn"><i class="fa fa-map-marker"></i> Track</button> -->
+                                       <div class="mapouter">
+                                        <div class="gmap_canvas">
+                                            <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=207&amp;height=234&amp;hl=en&amp;q=Rndsoftech Private limited&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                                            <!-- <a href="https://www.google.com/maps/place/University+of+Oxford/@11.2372639,77.0763035,18.23z/data=!4m6!3m5!1s0x4876c6a9ef8c485b:0xd2ff1883a001afed!8m2!3d51.7548164!4d-1.2543668!16zL20vMDd0Z24?hl=en"></a> -->
+                                        </div>
+                                    </div> 
+                                    </div> 
+
+
+                                    <!-- <table id="table">
+                                        <tr>
+                                        <th>Name</th>
+                                        <th>Price</th>
+                                        <th>color</th>
+                                        <th>Processor</th>
+                                        <th>Storage</th>
+                                        
+                                    </tr>      
+                                
+                                    </table> -->
+
+
+                                    
+
+                                   
+                                <div id="styleSelector"> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Required Jquery -->
+    <script type="text/javascript" src="assets/js/jquery/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="assets/js/jquery-ui/jquery-ui.min.js "></script> -->
+    <!-- <script type="text/javascript" src="assets/js/popper.js/popper.min.js"></script> -->
+    <!-- <script type="text/javascript" src="assets/js/bootstrap/js/bootstrap.min.js "></script> -->
+    <!-- <script type="text/javascript" src="assets/pages/widget/excanvas.js "></script> -->
+    <!-- waves js -->
+    <!-- <script src="assets/pages/waves/js/waves.min.js"></script> -->
+    <!-- jquery slimscroll js -->
+    <!-- <script type="text/javascript" src="assets/js/jquery-slimscroll/jquery.slimscroll.js "></script> -->
+    <!-- modernizr js -->
+    <!-- <script type="text/javascript" src="assets/js/modernizr/modernizr.js "></script> -->
+    <!-- slimscroll js -->
+    <!-- <script type="text/javascript" src="assets/js/SmoothScroll.js"></script> -->
+    <!-- <script src="assets/js/jquery.mCustomScrollbar.concat.min.js "></script> -->
+    <!-- Chart js -->
+    <!-- <script type="text/javascript" src="assets/js/chart.js/Chart.js"></script> -->
+    <!-- amchart js -->
+    <!-- <script src="https://www.amcharts.com/lib/3/amcharts.js"></script> -->
+    <!-- <script src="assets/pages/widget/amchart/gauge.js"></script> -->
+    <!-- <script src="assets/pages/widget/amchart/serial.js"></script> -->
+    <!-- <script src="assets/pages/widget/amchart/light.js"></script> -->
+    <!-- <script src="assets/pages/widget/amchart/pie.min.js"></script> -->
+    <!-- <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script> -->
+    <!-- menu js -->
+    <script src="assets/js/pcoded.min.js"></script>
+    <script src="assets/js/vertical-layout.min.js "></script>
+    <!-- custom js -->
+    <!-- <script type="text/javascript" src="assets/pages/dashboard/custom-dashboard.js"></script> -->
+    <script type="text/javascript" src="assets/js/script.js "></script>
+
+
+    <script>
+
+
+        function msg1() {
+            alert("Request for Order Cancellation has been received.\nYour order will be cancelled within 24 hrs.");
+
+        //   localStorage.removeItem("Name1",null);
+        //   localStorage.removeItem("Price1",null);
+        //   localStorage.removeItem("color1",null);
+        //   localStorage.removeItem("Processor1",null);
+        //   localStorage.removeItem("Storage1",null);
+        }
+
+
+
+        function msg2() {
+            alert("Request for Order Cancellation has been received.\nYour order will be cancelled within 24 hrs.");
+
+        //   localStorage.removeItem("Name",null);
+        //   localStorage.removeItem("Price",null);
+        //   localStorage.removeItem("color",null);
+        //   localStorage.removeItem("Processor",null);
+        //   localStorage.removeItem("Storage",null);
+
+        }
+
+
+
+
+
+
+
+        </script>
+
+
+
+
+</body>
+
+</html>

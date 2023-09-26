@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign Up  </title>
+    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 10]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <!-- Meta -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="description" content="Mega Able Bootstrap admin template made using Bootstrap 4 and it has huge amount of ready made feature, UI components, pages which completely fulfills any dashboard needs." />
+      <meta name="keywords" content="bootstrap, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" />
+      <meta name="author" content="codedthemes" />
+      <!-- Favicon icon -->
+
+      <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+      <!-- Google font-->     
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+      <!-- Required Fremwork -->
+      <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap.min.css">
+      <!-- waves.css -->
+      <link rel="stylesheet" href="assets/pages/waves/css/waves.min.css" type="text/css" media="all">
+      <!-- themify-icons line icon -->
+      <link rel="stylesheet" type="text/css" href="assets/icon/themify-icons/themify-icons.css">
+      <!-- ico font -->
+      <link rel="stylesheet" type="text/css" href="assets/icon/icofont/css/icofont.css">
+      <!-- Font Awesome -->
+      <link rel="stylesheet" type="text/css" href="assets/icon/font-awesome/css/font-awesome.min.css">
+      <!-- Style.css -->
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+      
+      
+
+
+<style>
+/* Style all input fields */
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Style the container for inputs */
+.container {
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
+
+.textbox {
+        width: 100%;
+        overflow: hidden;
+        font-size: 20px;
+        padding: 5px 0;
+        margin: 5px 0;
+        border-bottom: 1px solid #1b8bf9;
+    }
+
+
+    .textbox i {
+        width: 26px;
+        float: left;
+        text-align: center;
+    }
+    
+    .textbox input {
+        border: none;
+        outline: none;
+        background: none;
+        color: #000;
+        font-size: 18px;
+        width: 80%;
+        float: left;
+        margin: 0 10px;
+    }
+    </style>
+     
+
+
+  </head>
+
+  <body themebg-pattern="theme1">
+  <!-- Pre-loader start -->
+  <div class="theme-loader">
+      <div class="loader-track">
+          <div class="preloader-wrapper">
+              <div class="spinner-layer spinner-blue">
+                  <div class="circle-clipper left">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                      <div class="circle"></div>
+                  </div>
+              </div>
+              <div class="spinner-layer spinner-red">
+                  <div class="circle-clipper left">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                      <div class="circle"></div>
+                  </div>
+              </div>
+            
+              <div class="spinner-layer spinner-yellow">
+                  <div class="circle-clipper left">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                      <div class="circle"></div>
+                  </div>
+              </div>
+            
+              <div class="spinner-layer spinner-green">
+                  <div class="circle-clipper left">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                      <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                      <div class="circle"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Pre-loader end -->
+  <section class="login-block">
+        <!-- Container-fluid starts -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="md-float-material form-material">
+                        <div class="auth-box card">
+                            <div class="card-block">
+                                <div class="row m-b-20">
+                                    <div class="col-md-12">
+                                        <h3 class="text-center txt-primary">Sign up</h3>
+                                    </div>
+                                </div>
+
+
+                                <form name="loginform" action="thanks.html">
+                                    <!-- <div class="textbox" >
+                                        <input type="text" placeholder="First Name" id="id_firstname" minlength="1"  maxlength="15"  onkeydown="return /^[A-Z ]*$/i.test(event.key)"  required >
+                                    </div>
+                                
+                                <div class="textbox" >
+                                    <input type="text" placeholder="Last Name" id="id_lastname" minlength="1" maxlength="15" onkeydown="return /^[A-Z ]*$/i.test(event.key)" required >
+                                </div> -->
+                               
+
+                                <div class="textbox" >
+                                    <input type="text" placeholder="Email" id="id_email" pattern=".+@gmail.com"  maxlength="30" required >
+                                </div>
+                                
+                                <!-- <div class="textbox" >                               
+                                    <input type="text" placeholder="Mobile Number"  id="id_number"  minlength="1" maxlength="10"  onkeypress='return event.charCode >= 48 && event.charCode <= 57' >
+                                </div>
+
+
+                                <div class="textbox" >                               
+                                    <input type="text" placeholder="dd/mm/yyyy"  id="id_dob" minlength="10" maxlength="10"  oninput="this.value = this.value.replace(/[^0-9/]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                </div> -->
+
+
+
+                               <div class="textbox" >                               
+                               <input type="password" placeholder="Password"  id="id_password"  minlength="8" maxlength="16"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}" >
+                               <i class="far fa-eye" id="togglePassword" style="margin-top: 15px; cursor: pointer;"></i>
+                               </div>
+
+
+                               <!-- <div class="textbox" >
+                                <input type="password" placeholder="Confirm Password"  id="id_password2" minlength="8" maxlength="16" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}" >
+                                <i class="far fa-eye" id="togglePassword2" style="margin-top: 15px; cursor: pointer;"></i>
+                               </div> -->
+
+                               </form>
+                                
+                                
+                                <div class="row m-t-25 text-left">
+                                    <div class="col-md-12">
+                                        <div class="checkbox-fade fade-in-primary">
+                                            <label>
+                                                <input type="checkbox" value="">
+                                                <span class="cr"><i class="cr-icon icofont icofont-ui-check txt-primary"></i></span>
+                                                <span class="text-inverse">I read and accept all <a href="#"><b>Terms &amp; Conditions.</b></a></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row m-t-30">
+                                    <div class="col-md-12">
+                                        <a href="#"><button type="button" class="btn btn-primary btn-mdorg btn-block waves-effect text-center m-b-20" onclick="store()">Sign up now</button></a> 
+                                    </div>
+                                </div>
+                                <hr/>
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-inverse text-left m-b-0">Thank you.</p>
+                                        <p class="text-inverse text-left"><b>Do visit our website frequently.</b></p>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <img src="assets/images/Logo-small-bottom.png" alt="small-logo.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- end of col-sm-12 -->
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- end of container-fluid -->
+    </section>
+<!-- Warning Section Ends -->
+<!-- Required Jquery -->
+    <script type="text/javascript" src="assets/js/jquery/jquery.min.js"></script>     <script type="text/javascript" src="assets/js/jquery-ui/jquery-ui.min.js "></script>     <script type="text/javascript" src="assets/js/popper.js/popper.min.js"></script>     <script type="text/javascript" src="assets/js/bootstrap/js/bootstrap.min.js "></script>
+<!-- waves js -->
+<script src="assets/pages/waves/js/waves.min.js"></script>
+<!-- jquery slimscroll js -->
+<script type="text/javascript" src="assets/js/jquery-slimscroll/jquery.slimscroll.js "></script>
+<!-- modernizr js -->
+    <script type="text/javascript" src="assets/js/SmoothScroll.js"></script>     <script src="assets/js/jquery.mCustomScrollbar.concat.min.js "></script>
+<!-- i18next.min.js -->
+<script type="text/javascript" src="bower_components/i18next/js/i18next.min.js"></script>
+<script type="text/javascript" src="bower_components/i18next-xhr-backend/js/i18nextXHRBackend.min.js"></script>
+<script type="text/javascript" src="bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js"></script>
+<script type="text/javascript" src="bower_components/jquery-i18next/js/jquery-i18next.min.js"></script>
+<script type="text/javascript" src="assets/js/common-pages.js"></script>
+
+
+
+<script>
+
+const togglePassword = document.querySelector('#togglePassword');
+          const password = document.querySelector('#id_password');
+        
+          togglePassword.addEventListener('click', function (e) {
+            // toggle the type attribute
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            // toggle the eye slash icon
+            this.classList.toggle('fa-eye-slash');
+        });
+    
+
+
+$( document ).ready(function() {
+});
+
+
+function store(){
+    var name = $('#id_email').val();
+    var pw = $('#id_password').val();
+
+    localStorage.setItem('id_email', name);
+    localStorage.setItem('id_password', pw);
+    alert('Your account has been created');
+    window.location.href = "localsignin.html";
+}
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+
+</html>
